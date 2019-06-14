@@ -1,4 +1,5 @@
 # ocr flutter client
+![](assets/loading.gif)
 
 [Flutter 설치 및 실행](https://flutter.dev/docs/get-started/install)
 
