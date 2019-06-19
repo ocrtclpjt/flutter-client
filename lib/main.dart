@@ -5,6 +5,7 @@ import 'package:image_picker/image_picker.dart';
 
 import 'package:path/path.dart';
 import 'package:dio/dio.dart';
+import 'routes/second.dart';
 
 void main() {
   runApp(new MyApp());
@@ -73,6 +74,17 @@ class _ImagePickerDemoState extends State<_ImagePickerDemo> {
                       style: TextStyle(fontSize: 20),
                       overflow: TextOverflow.fade,
                     ),
+                    RaisedButton(
+                        child: Text('두 번째 화면으로 이동',
+                            style: TextStyle(fontSize: 21)),
+                        color: Colors.blue,
+                        onPressed: () {
+                          // push에 전달되는 두 번째 매개변수는 Route<T> 클래스.
+                          Navigator.push(context, MaterialPageRoute<void>(
+                              builder: (BuildContext context) {
+                            return Second();
+                          }));
+                        }),
                   ],
                 )));
   }
