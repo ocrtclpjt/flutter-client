@@ -28,6 +28,7 @@ dependencies:
   dio:
   image:
   auto_size_text:
+  diagonal_scrollview:
 
 dev_dependencies:
   flutter_test:
