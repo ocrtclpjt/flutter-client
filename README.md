@@ -8,4 +8,4 @@
 - ~~사진 업로드~~
 - ~~Rest API 호출~~
 - MP4 live Splash Screen
-- ~~response로 받은 좌표 위치에 label 찍기(absolute positioned widgets on image)
+- ~~response로 받은 좌표 위치에 label 찍기(absolute positioned widgets on image)~~
