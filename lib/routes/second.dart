@@ -33,8 +33,8 @@ class Second extends StatelessWidget {
           child: Stack(
               children: (json.decode(jsonData)['ocr_result'] as List)
                   .map((row) => Positioned(
-                      left: Result.fromJson(row).location.x.toDouble()-100,
-                      top: Result.fromJson(row).location.y.toDouble()-100,
+                      left: Result.fromJson(row).location.x.toDouble(),
+                      top: Result.fromJson(row).location.y.toDouble(),
                       child: SizedBox(
                         width: Result.fromJson(row).location.w.toDouble(),
                         height: Result.fromJson(row).location.h.toDouble(),
@@ -42,7 +42,7 @@ class Second extends StatelessWidget {
                           row['text'],
                           maxLines: 1,
                           minFontSize: 1,
-                          style: TextStyle(backgroundColor: Colors.lightGreen)    
+                          style: TextStyle(backgroundColor: Colors.lightGreen),   
                         ),
                       )))
                   .toList()

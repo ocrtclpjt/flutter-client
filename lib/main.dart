@@ -6,9 +6,21 @@ import 'package:image_picker/image_picker.dart';
 import 'package:path/path.dart';
 import 'package:dio/dio.dart';
 import 'routes/second.dart';
+import 'routes/video_splash.dart';
+import 'constant/constant.dart';
 
 void main() {
-  runApp(new MyApp());
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    title: 'OCR Demo',
+    theme: ThemeData(primarySwatch: Colors.red),
+    home: VideoSplashScreen(),
+    routes: <String,WidgetBuilder>{
+      HOME_SCREEN: (context) => _ImagePickerDemo(),
+      DETAIL_SCREEN: (context) => Second(),
+      VIDEO_SPALSH: (context) => VideoSplashScreen(),
+    },
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -35,7 +47,7 @@ class _ImagePickerDemoState extends State<_ImagePickerDemo> {
     return Scaffold(
         appBar: AppBar(title: Text('TCL OCR')),
         body: Builder(
-            builder: (context) => ListView(
+            builder: (context) => ListView( 
                   children: <Widget>[
                     ButtonBar(
                       children: <Widget>[
@@ -80,10 +92,7 @@ class _ImagePickerDemoState extends State<_ImagePickerDemo> {
                         color: Colors.blue,
                         onPressed: () {
                           // push에 전달되는 두 번째 매개변수는 Route<T> 클래스.
-                          Navigator.push(context, MaterialPageRoute<void>(
-                              builder: (BuildContext context) {
-                            return Second();
-                          }));
+                          Navigator.of(context).pushNamed(DETAIL_SCREEN);
                         }),
                   ],
                 )));

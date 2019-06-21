@@ -29,6 +29,7 @@ dependencies:
   image:
   auto_size_text:
   diagonal_scrollview:
+  video_player:
 
 dev_dependencies:
   flutter_test:
